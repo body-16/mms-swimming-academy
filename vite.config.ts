@@ -19,7 +19,7 @@ export default defineConfig({
       }
     }
   },
-  server: { // إضافة جديدة لتحسين تجربة التطوير
+  server: {
     port: 3000,
     open: true
   }
