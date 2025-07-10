@@ -13,9 +13,9 @@
       "@/*": ["./client/src/*"],
       "@shared/*": ["./shared/*"]
     },
-    "types": ["vite/client", "node"], // أضفنا "node" هنا
-    "lib": ["ESNext", "DOM", "DOM.Iterable"] // أضفنا "DOM.Iterable"
+    "types": ["vite/client", "node"],
+    "lib": ["ESNext", "DOM", "DOM.Iterable"]
   },
   "include": ["client/src", "shared", "server"],
-  "exclude": ["node_modules", "dist", "docs"] // أضفنا "docs"
+  "exclude": ["node_modules", "dist", "docs"]
 }
