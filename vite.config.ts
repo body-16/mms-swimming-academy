@@ -4,7 +4,7 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/MMS-Swimming-Academy/', // استبدل باسم مستودعك بالضبط
+  base: '/mms-swimming-academy/', // تأكد من مطابقة اسم المستودع
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './client/src')
@@ -18,5 +18,9 @@ export default defineConfig({
         main: path.resolve(__dirname, './client/index.html')
       }
     }
+  },
+  server: { // إضافة جديدة لتحسين تجربة التطوير
+    port: 3000,
+    open: true
   }
 });
