@@ -1,8 +1,10 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import path from 'path';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import path from 'path'
 
 export default defineConfig({
+  plugins: [react()],
+  base: '/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './client/src'),
@@ -10,16 +12,13 @@ export default defineConfig({
     }
   },
   build: {
-    outDir: 'docs',
-    emptyOutDir: true,
+    outDir: 'dist',
     rollupOptions: {
-      input: {
-        main: path.resolve(__dirname, './client/index.html')
-      }
+      input: path.resolve(__dirname, 'client/index.html')
     }
   },
   server: {
     port: 3000,
     open: true
   }
-});
+})
