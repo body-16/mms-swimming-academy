@@ -1,27 +1,22 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import path from "path";
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
+  base: '/MMS-Swimming-Academy/', // استبدل باسم مستودعك بالضبط
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./client/src"),
-      "@shared": path.resolve(__dirname, "./shared")
+      '@': path.resolve(__dirname, './client/src')
     }
   },
-  root: "./client",
   build: {
-    outDir: "../dist",
+    outDir: 'docs',
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: path.resolve(__dirname, "./client/index.html")
+        main: path.resolve(__dirname, './client/index.html')
       }
     }
-  },
-  server: {
-    port: 3000,
-    open: true
   }
 });
